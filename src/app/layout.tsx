@@ -3,6 +3,7 @@ import { Roboto, Inter } from 'next/font/google'
 import './globals.css'
 import Header from './components/header'
 import Footer from './components/footer'
+import Provider from './services/ThemeProvider'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -31,9 +32,11 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${roboto.variable} antialiased h-screen w-screen flex flex-col`}
       >
-        <Header />
-        <main className="h-full w-100%">{children}</main>
-        <Footer />
+        <Provider>
+          <Header />
+          <main className="h-full w-100%">{children}</main>
+          <Footer />
+        </Provider>
       </body>
     </html>
   )
