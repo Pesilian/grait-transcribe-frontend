@@ -23,7 +23,7 @@ export default function Transcription() {
         content="
          Velit ea est culpa laborum enim officia aliquip qui dolore incididunt. Voluptate id nisi in magna fugiat exercitation aliquip sint minim consectetur. Duis et anim laboris ipsum dolore elit sunt fugiat veniam consequat amet magna culpa reprehenderit. Sint id deserunt in do anim ullamco. Ea est elit deserunt exercitation labore laborum laboris dolore duis ipsum exercitation laboris irure sit. Veniam enim duis aliqua incididunt anim est ullamco mollit tempor. Adipisicing nisi anim tempor esse id voluptate officia culpa duis officia."
       />
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-white opacity-50 backdrop-blur-sm"></div>
+      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient"></div>
     </div>
   )
 }

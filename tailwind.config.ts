@@ -13,9 +13,9 @@ export default {
         Inter: ['var(--font-inter)', 'sans-serif'],
         Roboto: ['var(--font-roboto)', 'sans-serif'],
       },
-      maskImage: {
+      backgroundImage: {
         gradient:
-          'linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 1))',
+          'linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);',
       },
 
       colors: {
