@@ -32,7 +32,9 @@ export default function RootLayout({
         className={`${inter.variable} ${roboto.variable} antialiased h-screen w-screen flex flex-col`}
       >
         <Header />
-        <main className="h-full w-100%">{children}</main>
+        <main className="h-full w-5/6 m- auto overflow-hidden ">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

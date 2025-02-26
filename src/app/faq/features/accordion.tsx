@@ -1,5 +1,5 @@
 'use client'
-import { DarkMode } from '@/app/services/themeService'
+import { DarkMode } from '@/services/themeService'
 import { useState } from 'react'
 import React from 'react'
 import { HiOutlineChevronDown } from 'react-icons/hi2'
@@ -38,7 +38,7 @@ export default function AccordionFaq({ title, content }: FaQAccordation) {
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="font-bold py-2 px-4 self-end"
+        className="font-bold py-2 px-4 self-center"
       >
         {open ? <HiOutlineChevronUp /> : <HiOutlineChevronDown />}
       </button>

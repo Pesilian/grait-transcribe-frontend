@@ -2,32 +2,21 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import FaQLink from './faqLink'
-import { DarkMode } from '../services/themeService'
+import { DarkMode } from '../../services/themeService'
 
 export default function Header() {
   const isDarkMode = DarkMode()
   return (
     <header className="flex justify-between w-full ">
       <Link href="/">
-        {isDarkMode ? (
-          <Image
-            src="/grLogotyp_dark.svg"
-            alt="GR Logga"
-            width={215}
-            height={70}
-            priority={true}
-            className="m-10 w-80 h-auto "
-          />
-        ) : (
-          <Image
-            src="/grLogotyp.svg"
-            alt="GR Logga"
-            width={215}
-            height={70}
-            priority={true}
-            className="m-10 w-80 h-auto "
-          />
-        )}
+        <Image
+          src={isDarkMode ? '/grLogotyp_dark.svg' : '/grLogotyp.svg'}
+          alt="GR Logga"
+          width={215}
+          height={70}
+          priority={true}
+          className="m-10 w-80 h-auto "
+        />
       </Link>
       <FaQLink />
     </header>
