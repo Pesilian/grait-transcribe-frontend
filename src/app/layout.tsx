@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Roboto, Inter } from 'next/font/google'
 import './globals.css'
 import Header from './components/header'
-import Footer from './components/footer'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -31,7 +30,6 @@ export default function RootLayout({
       <body className="antialiased h-screen w-screen flex flex-col font-Inter">
         <Header />
         <main className="h-full w-full overflow-hidden ">{children}</main>
-        <Footer />
       </body>
     </html>
   )

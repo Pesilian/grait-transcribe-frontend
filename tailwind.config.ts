@@ -15,9 +15,10 @@ export default {
       },
       backgroundImage: {
         gradient:
-          'linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);',
+          'linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%)',
+        'gradient-bl':
+          'linear-gradient(0deg, rgba(12,10,9,1) 50%, rgba(12,10,9,0) 100%)',
       },
-
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',

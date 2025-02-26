@@ -1,6 +1,10 @@
+'use client'
+
+import { DarkMode } from '@/services/themeService'
 import TextBox from './textBox'
 
 export default function Transcription() {
+  const isDarkMode = DarkMode()
   return (
     <div className="col-span-3 col-start-2 font-Inter overscroll-contain overflow-auto overscroll-contain">
       <TextBox content="Pariatur aliqua sunt mollit proident eu quis eiusmod Lorem fugiat est consectetur ex tempor cillum. Qui aliquip quis ut cillum aliqua esse aliquip ipsum laboris. In nostrud voluptate nulla mollit cupidatat pariatur ea fugiat ullamco irure occaecat. Labore ad laboris consequat labore ad irure ullamco ex labore aute ad tempor. Exercitation adipisicing nulla occaecat ullamco enim. Do voluptate culpa irure adipisicing culpa ex duis duis nulla officia voluptate nisi id. Adipisicing aute proident ut enim ut voluptate cupidatat." />
@@ -23,7 +27,9 @@ export default function Transcription() {
         content="
          Velit ea est culpa laborum enim officia aliquip qui dolore incididunt. Voluptate id nisi in magna fugiat exercitation aliquip sint minim consectetur. Duis et anim laboris ipsum dolore elit sunt fugiat veniam consequat amet magna culpa reprehenderit. Sint id deserunt in do anim ullamco. Ea est elit deserunt exercitation labore laborum laboris dolore duis ipsum exercitation laboris irure sit. Veniam enim duis aliqua incididunt anim est ullamco mollit tempor. Adipisicing nisi anim tempor esse id voluptate officia culpa duis officia."
       />
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient"></div>
+      <div
+        className={`absolute bottom-0 left-0 w-full h-40 ${isDarkMode ? 'bg-gradient-bl' : 'bg-gradient'}`}
+      ></div>
     </div>
   )
 }

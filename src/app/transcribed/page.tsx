@@ -1,4 +1,4 @@
-import AudioIcon from './audioIcon'
+import AudioIcon from './features/audioIcon'
 import PagesButton from './features/pagesButtons'
 import TranscriptionHeader from './features/transcriptionHeader'
 import Transcription from './features/transcriptionText'
