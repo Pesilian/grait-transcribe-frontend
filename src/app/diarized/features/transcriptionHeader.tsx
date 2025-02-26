@@ -1,18 +1,19 @@
 'use client'
 
-import { DarkMode } from '@/services/themeService'
-import { LuAudioLines } from 'react-icons/lu'
-import PagesButton from './pagesButtons'
+import TranscriptionInfo from './transcriptionInfo'
 
 export default function TranscriptionHeader() {
-  const isDarkMode = DarkMode()
   return (
-    <div className=" w-5/6 self-end flex">
-      <div className="w-14 h-14 border-2 border-stone-950 bg-stone-950 rounded-md flex justify-center items-center">
-        <LuAudioLines className={`w-8 h-8 ${isDarkMode ? '' : 'invert'}`} />
+    <div className="col-span-2 col-start-2 flex flex-col h-20">
+      <h2 className="font-black text-4xl font-Roboto">
+        Transcription file title
+      </h2>
+      <div className="flex">
+        <TranscriptionInfo label="2 talare" />
+        <TranscriptionInfo label="Svenska" />
+        <TranscriptionInfo label="498 ord" />
+        <TranscriptionInfo label="12 min" />
       </div>
-      <h2 className="font-black text-4xl">Transcription file title</h2>
-      <PagesButton />
     </div>
   )
 }

@@ -27,14 +27,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.variable} ${roboto.variable} antialiased h-screen w-screen flex flex-col`}
-      >
+    <html lang="en" className={(inter.variable, roboto.variable)}>
+      <body className="antialiased h-screen w-screen flex flex-col font-Inter">
         <Header />
-        <main className="h-full w-5/6 m- auto overflow-hidden ">
-          {children}
-        </main>
+        <main className="h-full w-full overflow-hidden ">{children}</main>
         <Footer />
       </body>
     </html>

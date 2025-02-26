@@ -5,18 +5,18 @@ import { HiOutlineCodeBracket } from 'react-icons/hi2'
 
 export default function PagesButton() {
   return (
-    <div className="flex">
-      <div className="border-r-2 border-t-2 border-t-stone-300 border-r-stone-300 rounded-tr-md w-12 flex flex-col">
+    <div className="flex justify-self-end">
+      <div className="border border-stone-100 rounded-md w-20 h-8 flex flex-col shadow-sm mr-2">
         <Link href="/diarize" className="self-end p-2">
           <span className="">
-            <HiOutlineCodeBracket className="text-stone-300 w-6 h-6" />
+            <HiOutlineCodeBracket className="text-stone-300 w-4 h-4" />
           </span>
         </Link>
       </div>
-      <div className="border-r-2 border-t-2 border-t-stone-300 border-r-stone-300 rounded-tr-md w-12 flex flex-col">
+      <div className="border border-stone-100 rounded-md w-20 h-8 flex flex-col shadow-sm">
         <Link href="/diarize" className="self-end p-2">
           <span className="">
-            <HiOutlineDocument className="text-stone-300 w-6 h-6" />
+            <HiOutlineDocument className="text-stone-300 w-4 h-4" />
           </span>
         </Link>
       </div>
