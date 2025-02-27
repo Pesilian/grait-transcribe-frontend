@@ -1,6 +1,5 @@
 'use client'
 import { LuAudioLines } from 'react-icons/lu'
-import Button from '../../components/button'
 
 export default function DragAndDrop() {
   return (
@@ -13,8 +12,6 @@ export default function DragAndDrop() {
         <LuAudioLines />
         <p>eller klicka för att väla dina filer på datorn</p>
       </form>
-      <Button link="/" label="Tillbaka" />
-      <Button link="/faq" label="Placeholder" />
     </div>
   )
 }

@@ -11,7 +11,7 @@ export default function Hero() {
         alt="Kommunkartan"
         width={500}
         height={500}
-        className="p-4 max-w-full lg:max-w-[400px] md:max-w-[300px] h-auto"
+        className="p-4 max-w-full lg:max-w-[400px] md:max-w-[300px] h-auto "
         priority={true}
       />
     </div>
