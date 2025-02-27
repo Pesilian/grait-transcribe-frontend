@@ -15,7 +15,7 @@ export default function Header() {
           width={215}
           height={70}
           priority={true}
-          className="m-10 w-80 h-auto "
+          className="m-10 w-60 h-auto "
         />
       </Link>
       <FaQLink />

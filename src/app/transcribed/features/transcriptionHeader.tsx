@@ -1,18 +1,18 @@
 'use client'
 
-import TranscriptionInfo from './transcriptionInfo'
+import TranscriptionIcons from './transcriptionIcons'
 
 export default function TranscriptionHeader() {
   return (
-    <div className="col-span-2 col-start-2 flex flex-col h-20">
-      <h2 className="font-black text-4xl font-Roboto">
+    <div className="col-span-3 col-start-2 flex flex-col h-20">
+      <h2 className="text-4xl font-Roboto font-bold tracking-wide">
         Transcription file title
       </h2>
       <div className="flex">
-        <TranscriptionInfo label="2 talare" />
-        <TranscriptionInfo label="Svenska" />
-        <TranscriptionInfo label="498 ord" />
-        <TranscriptionInfo label="12 min" />
+        <TranscriptionIcons label="2 talare" />
+        <TranscriptionIcons label="Svenska" />
+        <TranscriptionIcons label="498 ord" />
+        <TranscriptionIcons label="12 min" />
       </div>
     </div>
   )
