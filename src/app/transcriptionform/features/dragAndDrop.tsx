@@ -11,7 +11,11 @@ export default function DragAndDrop() {
     e.preventDefault()
     if (e.target.files) {
       const newFiles = Array.from(e.target.files)
-      setFiles((prevState) => [...prevState, ...newFiles])
+      setFiles((prevState) => {
+        const updatedFiles = [...prevState, ...newFiles]
+        console.log('Filer att skicka:', updatedFiles)
+        return updatedFiles
+      })
     }
   }
 
@@ -22,7 +26,11 @@ export default function DragAndDrop() {
 
     if (e.dataTransfer.files) {
       const newFiles = Array.from(e.dataTransfer.files)
-      setFiles((prevState) => [...prevState, ...newFiles])
+      setFiles((prevState) => {
+        const updatedFiles = [...prevState, ...newFiles]
+        console.log('Filer att skicka:', updatedFiles)
+        return updatedFiles
+      })
     }
   }
 
