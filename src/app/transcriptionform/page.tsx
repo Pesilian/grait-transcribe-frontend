@@ -3,7 +3,7 @@ import Hero from '../components/Hero'
 
 export default function TranscriptionForm() {
   return (
-    <div className="h-full w-full grid grid-cols-2">
+    <div className="h-full w-full grid grid-cols-3">
       <Hero />
       <Form />
     </div>

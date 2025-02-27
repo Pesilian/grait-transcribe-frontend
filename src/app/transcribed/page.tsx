@@ -6,7 +6,7 @@ import TranscriptionSegment from './features/transcriptionText'
 
 export default function Diarized() {
   return (
-    <div className="h-full w-full grid grid-cols-7 gap-4 content-start">
+    <div className="h-full w-full grid grid-cols-7 gap-4 content-start mt-8">
       <AudioIcon />
       <TranscriptionHeader />
       <PagesButton />

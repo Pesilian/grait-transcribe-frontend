@@ -2,9 +2,9 @@ import FormLink from './formLink'
 
 export default function AboutUs() {
   return (
-    <div className="justify-self-start self-center">
+    <div className="col-span-2 col-start-2  justify-self-center self-center w-1/2">
       <h2 className=" font-black text-5xl mb-4">GR Transcripion</h2>
-      <p className="font-Roboto text-base/7  w-5/6">
+      <p className="font-Roboto text-base/7 w-4/6">
         Vår AI-drivna transkriberingstjänst använder den senaste teknologin för
         att omvandla tal till text med hög precision. Tjänsten är designad för
         att hantera olika accenter, bakgrundsljud och talhastigheter, vilket gör

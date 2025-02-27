@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Roboto, Inter } from 'next/font/google'
 import './globals.css'
 import Header from './components/header'
+import FaQLink from './components/faqLink'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -27,9 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={(inter.variable, roboto.variable)}>
-      <body className="antialiased h-screen w-screen flex flex-col font-Inter">
+      <body className="antialiased h-screen w-screen grid grid-cols-7 font-Inter">
         <Header />
-        <main className="h-full w-full overflow-hidden ">{children}</main>
+        <main className="h-full w-full overflow-hidden col-span-5 col-start-2 justify-self-center self-center ">
+          {children}
+        </main>
+        <FaQLink />
       </body>
     </html>
   )

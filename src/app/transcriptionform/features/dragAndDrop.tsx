@@ -72,8 +72,8 @@ export default function DragAndDrop() {
 
       <form
         className={`${
-          dragActive ? 'bg-stone-300' : 'bg-stone-200'
-        } p-8 w-5/6 h-60 rounded text-center flex flex-col text-center self-center justify-center border-2 border-stone-400 border-dashed mb-8 opacity-50`}
+          dragActive ? 'bg-stone-200' : 'bg-stone-100'
+        } p-8 w-5/6 h-60 rounded text-center flex flex-col text-center self-center justify-center border border-stone-400 border-dashed mb-8 `}
         onDragEnter={handleDragEnter}
         onSubmit={(e) => e.preventDefault()}
         onDrop={handleDrop}

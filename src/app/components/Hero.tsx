@@ -5,7 +5,7 @@ import { DarkMode } from '../../services/themeService'
 export default function Hero() {
   const isDarkMode = DarkMode()
   return (
-    <div className="justify-self-center self-center">
+    <div className="justify-self-end self-center">
       <Image
         src={isDarkMode ? 'kommunkartan_dark.svg' : 'kommunkartan.svg'}
         alt="Kommunkartan"
