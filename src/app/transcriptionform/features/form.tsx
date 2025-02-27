@@ -46,9 +46,19 @@ export default function Form() {
         </select>
       </form>
       <DragAndDrop />
-      <div>
-        <Button link="/" label="Tillbaka" />
-        <Button link="/transcribed" label="Transkribera" />
+      <div className="flex justify-between">
+        <Button
+          link="/"
+          label="Tillbaka"
+          color="stone-200"
+          textColor="stone-400"
+        />
+        <Button
+          link="/transcribed"
+          label="Transkribera"
+          color="stone-950"
+          textColor="stone-50"
+        />
       </div>
     </div>
   )

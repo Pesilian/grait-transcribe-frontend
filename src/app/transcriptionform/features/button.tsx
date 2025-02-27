@@ -4,15 +4,17 @@ import Link from 'next/link'
 interface LinkProps {
   link: string
   label: string
+  color: string
+  textColor: string
 }
 
-export default function Button({ link, label }: LinkProps) {
+export default function Button({ link, label, color, textColor }: LinkProps) {
   return (
     <Link
       href={link}
-      className="bg-black justify-self-center self-center rounded-lg p-2 w-20 h-20 m-2  "
+      className={`border bg-${color} justify-self-center self-center rounded-lg p-2 w-auto h-auto `}
     >
-      <span className="text-white p-4">{label}</span>
+      <span className={`text-${textColor} p-4`}>{label}</span>
     </Link>
   )
 }
