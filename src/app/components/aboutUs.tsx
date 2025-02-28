@@ -2,7 +2,7 @@ import FormLink from './formLink'
 
 export default function AboutUs() {
   return (
-    <div className="col-span-2 col-start-2  justify-self-center self-center w-1/2">
+    <aside className="col-span-2 col-start-2  justify-self-center self-center w-1/2">
       <h2 className=" font-black text-5xl mb-4">GR Transcripion</h2>
       <p className="font-Roboto text-base/7 w-4/6">
         Vår AI-drivna transkriberingstjänst använder den senaste teknologin för
@@ -17,6 +17,6 @@ export default function AboutUs() {
         dina ljudfiler omvandlade till text på några minuter!
       </p>
       <FormLink />
-    </div>
+    </aside>
   )
 }

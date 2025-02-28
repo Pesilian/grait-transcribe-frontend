@@ -4,7 +4,7 @@ import Segment from './segment'
 
 export default function TranscriptionText() {
   return (
-    <div className="w-full h-auto col-span-5 col-start-2 font-Inter overflow-auto overscroll-contain flex flex-col p-8">
+    <section className="w-full h-auto col-span-5 col-start-2 font-Inter overflow-auto overscroll-contain flex flex-col p-8">
       <Segment
         speakerSmall="A"
         speaker="Person A"
@@ -136,6 +136,6 @@ export default function TranscriptionText() {
         content="   
       Lorem dolor commodo non pariatur occaecat eu cupidatat ut. Id commodo incididunt laboris aliquip. Officia id veniam eu mollit voluptate occaecat nostrud anim ullamco aliquip ex commodo eu. Ullamco magna duis esse nulla minim consequat mollit aliquip id elit. Eu proident ullamco sunt exercitation."
       />
-    </div>
+    </section>
   )
 }

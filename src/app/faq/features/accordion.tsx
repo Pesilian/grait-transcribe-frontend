@@ -20,20 +20,20 @@ export default function AccordionFaq({ title, content }: FaQAccordation) {
       className={`h-auto w-4/6 flex flex-col self-center  border-2 rounded-sm m-6 border-t-stone-300 ${isDarkMode ? 'border-stone-950' : 'border-stone-50 '}`}
     >
       <div>
-        <h2
+        <summary
           className={`text-lg font-bold text-center pt-6 hover:text-stone-500 ${
             open ? 'text-stone-200' : ''
           }`}
         >
           {title}
-        </h2>
-        <div
+        </summary>
+        <details
           className={`w-full overflow-hidden transition-all duration-300 ${
             open ? 'h-auto pt-4 pb-4' : 'h-0'
           }`}
         >
           <p className="text-center">{content} </p>
-        </div>
+        </details>
       </div>
       <button
         type="button"

@@ -5,7 +5,7 @@ import { DarkMode } from '../../services/themeService'
 export default function Hero() {
   const isDarkMode = DarkMode()
   return (
-    <div className="justify-self-end self-center">
+    <figure className="justify-self-end self-center">
       <Image
         src={isDarkMode ? 'kommunkartan_dark.svg' : 'kommunkartan.svg'}
         alt="Kommunkartan"
@@ -14,6 +14,6 @@ export default function Hero() {
         className="p-4 max-w-full lg:max-w-[400px] md:max-w-[300px] h-auto "
         priority={true}
       />
-    </div>
+    </figure>
   )
 }

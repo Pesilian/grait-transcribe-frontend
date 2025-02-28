@@ -17,7 +17,7 @@ export default function Segment({
 }: SegmentProps) {
   const isDarkMode = DarkMode()
   return (
-    <div
+    <section
       className={`mb-4 p-4 w-full h-auto rounded-sm flex hover:ring ${isDarkMode ? 'hover:bg-stone-800 hover:ring-stone-50' : 'hover:bg-white'}`}
     >
       <div
@@ -38,6 +38,6 @@ export default function Segment({
         </span>
       </div>
       <p>{content}</p>
-    </div>
+    </section>
   )
 }

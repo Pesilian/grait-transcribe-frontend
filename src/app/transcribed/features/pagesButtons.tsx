@@ -5,7 +5,7 @@ import { HiOutlineCodeBracket } from 'react-icons/hi2'
 
 export default function PagesButton() {
   return (
-    <div className="flex justify-self-end">
+    <figure className="flex justify-self-end">
       <div className="border border-stone-100 rounded-md w-20 h-8 flex flex-col shadow-sm mr-2">
         <Link href="/transcribed/raw" className="self-end p-2">
           <span className="">
@@ -20,6 +20,6 @@ export default function PagesButton() {
           </span>
         </Link>
       </div>
-    </div>
+    </figure>
   )
 }

@@ -8,7 +8,7 @@ export default function Form() {
   const [selectLanguage, setSelectLanguage] = useState<string | null>(null)
 
   return (
-    <div className="flex flex-col col-span-2 col-start-2  justify-self-center self-center bg-white rounded-sm h-auto w-96 flex  p-2">
+    <section className="flex flex-col col-span-2 col-start-2  justify-self-center self-center bg-white rounded-sm h-auto w-96 flex  p-2">
       <h2 className="font-Roboto text-2xl font-medium">Inställningar</h2>
       <h3 className="font_Roboto text-nowrap text-xs text-stone-700 ">
         Konfigurera din transkription
@@ -60,6 +60,6 @@ export default function Form() {
           textColor="stone-50"
         />
       </div>
-    </div>
+    </section>
   )
 }

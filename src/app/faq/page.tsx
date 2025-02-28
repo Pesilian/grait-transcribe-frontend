@@ -2,7 +2,7 @@ import AccordionFaq from './features/accordion'
 
 export default function FaQ() {
   return (
-    <div className="flex flex-col justify-items-center">
+    <section className="flex flex-col justify-items-center">
       <AccordionFaq
         title="Hur gör jag för att göra saker?"
         content="Pariatur consectetur officia ex aliquip excepteur ad nostrud pariatur quis cillum aliqua. Excepteur quis aliquip dolore nostrud et incididunt adipisicing aliquip nulla sit. Sunt voluptate dolor irure et nisi velit enim id nulla dolor ad pariatur occaecat. Cillum occaecat irure culpa elit qui exercitation esse excepteur dolor ut. Do laborum fugiat incididunt elit sint nulla."
@@ -21,6 +21,6 @@ export default function FaQ() {
         title="Och hundar då?"
         content="Nostrud laborum sint quis reprehenderit voluptate in et enim laborum consectetur Lorem officia. Deserunt quis incididunt et laborum pariatur occaecat exercitation incididunt deserunt id tempor ea. Aute ipsum consectetur tempor aute irure sunt non consectetur mollit irure aute consectetur elit esse."
       />
-    </div>
+    </section>
   )
 }

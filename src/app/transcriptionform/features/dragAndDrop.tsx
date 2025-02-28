@@ -64,7 +64,7 @@ export default function DragAndDrop() {
   }
 
   return (
-    <div className="flex flex-col justify-self-center self-start w-full">
+    <section className="flex flex-col justify-self-center self-start w-full">
       <h2 className="text-xs mt-4 font-medium">Ladda upp fil</h2>
       <h3 className="mb-4 text-xs text-stone-400">
         Max 200MB - WAV, MP3, OGG, M4A
@@ -110,6 +110,6 @@ export default function DragAndDrop() {
           ))}
         </div>
       </form>
-    </div>
+    </section>
   )
 }

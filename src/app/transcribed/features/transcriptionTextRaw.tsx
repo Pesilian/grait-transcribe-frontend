@@ -1,6 +1,6 @@
 export default function RawTranscription() {
   return (
-    <div className="p-8 w-full h-auto col-span-5 col-start-2 font-Inter overflow-auto overscroll-contain flex flex-col">
+    <section className="p-8 w-full h-auto col-span-5 col-start-2 font-Inter overflow-auto overscroll-contain flex flex-col">
       <p>
         Consequat mollit elit exercitation eiusmod amet voluptate nisi aute.
         Nisi quis aliquip tempor quis occaecat cupidatat eu officia amet anim
@@ -39,6 +39,6 @@ export default function RawTranscription() {
         incididunt est eu nisi eu. Non excepteur mollit mollit cupidatat ipsum
         anim duis ad sit. Occaecat sunt eu fugiat incididunt voluptate.
       </p>
-    </div>
+    </section>
   )
 }

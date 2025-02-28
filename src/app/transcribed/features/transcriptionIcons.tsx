@@ -9,10 +9,10 @@ interface LabelProps {
 export default function TranscriptionIcons({ label }: LabelProps) {
   const isDarkMode = DarkMode()
   return (
-    <div
+    <figure
       className={`${isDarkMode ? 'bg-stone-600 text-stone-50' : 'bg-stone-300'} mt-4 mr-2 rounded-sm shadow-sm text-center text-sm font-Inter`}
     >
       {label}
-    </div>
+    </figure>
   )
 }
