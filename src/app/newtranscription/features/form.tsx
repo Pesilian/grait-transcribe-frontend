@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 import DragAndDrop from './dragAndDrop'
-import Button from './button'
 
 export default function Form() {
   const [selectNumber, setSelectNumber] = useState<number | null>(null)
@@ -46,20 +45,6 @@ export default function Form() {
         </select>
       </form>
       <DragAndDrop />
-      <div className="flex justify-between">
-        <Button
-          link="/"
-          label="Tillbaka"
-          color="stone-200"
-          textColor="stone-400"
-        />
-        <Button
-          link="/transcribed"
-          label="Transkribera"
-          color="stone-950"
-          textColor="stone-50"
-        />
-      </div>
     </section>
   )
 }
