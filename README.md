@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Setup to Run Project in Docker
 
-## Getting Started
+## Prerequisites
 
-First, run the development server:
+- **Docker** installed (if not, follow [this guide](https://docs.docker.com/get-docker/)).
+- **Docker Desktop** installed (if you want to use a GUI for managing Docker).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Step 1: Clone the Project
+
+First, clone the repository. Open your terminal and run:
+
+```sh
+git clone https://github.com/Pesilian/grait-transcribe-frontend.git
+cd grait-transcribe-frontend
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Step 2: Build and Start the Docker Container
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Navigate to your frontend folder** (if not already there):
 
-## Learn More
+```sh
+cd grait-transcribe-frontend
+```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Build and start the Docker container** by running the following command:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+docker compose up --build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Step 3: Access Your Application
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```sh
+http://localhost:3000
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Step 4: Stop container
+
+```sh
+docker compose down
+```
