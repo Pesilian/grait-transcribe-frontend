@@ -11,10 +11,10 @@ RUN npm install
 # Kopiera resten av koden
 COPY . .
 
-# Bygg frontend (om du använder Next.js, React, eller liknande)
+# Bygg frontend
 RUN npm run build
 
-# Exponera porten (för React är det ofta 3000, för Next.js 3000 eller 4000)
+# Exponera porten 
 EXPOSE 3000
 
 # Starta applikationen
