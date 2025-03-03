@@ -36,14 +36,43 @@ docker compose up --build
 
 ## Step 3: Access Your Application
 
-```sh
+```
 http://localhost:3000
 ```
 
 ---
 
-## Step 4: Stop container
+## Step 4: Stop the Container
+
+When you're done and want to stop the container, run:
 
 ```sh
 docker compose down
 ```
+
+This command will shut down and remove the container.
+
+---
+
+## Step 5: Manage and Debug the Container (Optional)
+
+To follow the logs of the container, you can run:
+
+```sh
+docker compose logs -f
+```
+
+---
+
+## Common Issue and Solutions
+
+### **Port already in use**
+
+If you get an error saying port 3000 is already in use, you can change the mapped port in `docker-compose.yml`:
+
+```yaml
+ports:
+  - '4000:3000' # Map port 4000 on your machine to 3000 in the container
+```
+
+---
