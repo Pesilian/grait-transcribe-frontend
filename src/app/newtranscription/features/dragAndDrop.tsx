@@ -1,11 +1,14 @@
 'use client'
 import { useRef, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { LuAudioLines } from 'react-icons/lu'
+import Button from './button'
 
 export default function DragAndDrop() {
   const [dragActive, setDragActive] = useState<boolean>(false)
   const inputRef = useRef<HTMLInputElement | null>(null)
   const [files, setFiles] = useState<File[]>([])
+  const [uploading, setUploading] = useState<boolean>(false)
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     e.preventDefault()
@@ -63,6 +66,37 @@ export default function DragAndDrop() {
     }
   }
 
+  const router = useRouter()
+
+  async function uploadFiles() {
+    if (files.length === 0) return
+
+    setUploading(true)
+    const formData = new FormData()
+    files.forEach((file) => {
+      formData.append('audio_file', file)
+    })
+
+    try {
+      const response = await fetch('/api/proxy', {
+        method: 'POST',
+        body: formData,
+      })
+
+      if (!response.ok) {
+        throw new Error('Uppladdning misslyckades')
+      }
+      const data = await response.json()
+      localStorage.setItem('transcription', JSON.stringify(data))
+
+      router.push('/transcribed')
+    } catch (error) {
+      console.error('Fel vid uppladdning:', error)
+      alert('Fel vid uppladdning av fil.')
+    } finally {
+      setUploading(false)
+    }
+  }
   return (
     <section className="flex flex-col justify-self-center self-start w-full">
       <h2 className="text-xs mt-4 font-medium">Ladda upp fil</h2>
@@ -109,7 +143,24 @@ export default function DragAndDrop() {
             </div>
           ))}
         </div>
+
+        {uploading && <div className="mt-2"></div>}
       </form>
+      <div className="flex justify-between">
+        <Button
+          link="/"
+          label="Tillbaka"
+          color="stone-200"
+          textColor="stone-400"
+        />
+        <Button
+          onClick={uploadFiles}
+          label={uploading ? 'Laddar upp...' : 'Transkribera'}
+          color="stone-950"
+          textColor="stone-50"
+          disabled={uploading}
+        />
+      </div>
     </section>
   )
 }

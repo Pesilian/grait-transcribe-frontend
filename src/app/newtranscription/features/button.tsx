@@ -1,20 +1,41 @@
 'use client'
 import Link from 'next/link'
 
-interface LinkProps {
-  link: string
+interface ButtonProps {
   label: string
   color: string
   textColor: string
+  link?: string
+  onClick?: () => void
+  disabled?: boolean
 }
 
-export default function Button({ link, label, color, textColor }: LinkProps) {
+export default function Button({
+  label,
+  color,
+  textColor,
+  link,
+  onClick,
+  disabled,
+}: ButtonProps) {
+  if (link) {
+    return (
+      <Link
+        href={link}
+        className={`bg-${color} text-${textColor} px-4 py-2 rounded`}
+      >
+        {label}
+      </Link>
+    )
+  }
+
   return (
-    <Link
-      href={link}
-      className={`border bg-${color} justify-self-center self-center rounded-lg p-2 w-auto h-auto `}
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`border bg-${color} justify-self-center self-center rounded-lg p-2 w-auto h-auto text-${textColor} px-4 py-2 rounded ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
     >
-      <span className={`text-${textColor} p-4`}>{label}</span>
-    </Link>
+      {label}
+    </button>
   )
 }

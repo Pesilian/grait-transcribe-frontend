@@ -17,31 +17,14 @@ export default function AccordionFaq({ title, content }: FaQAccordation) {
   return (
     <div
       onClick={() => setOpen(!open)}
-      className={`h-auto w-4/6 flex flex-col self-center  border-2 rounded-sm m-6 border-t-stone-300 ${isDarkMode ? 'border-stone-950' : 'border-stone-50 '}`}
+      className={`h-auto w-4/6 flex flex-col self-center border-2 rounded-sm m-8 mt-12 border-t-stone-300 ${isDarkMode ? 'border-stone-950' : 'border-stone-50 '}`}
     >
-      <div>
-        <summary
-          className={`text-lg font-bold text-center pt-6 hover:text-stone-500 ${
-            open ? 'text-stone-200' : ''
-          }`}
-        >
-          {title}
+      <details className="list-none">
+        <summary className="list-none">
+          {title} {open ? <HiOutlineChevronUp /> : <HiOutlineChevronDown />}
         </summary>
-        <details
-          className={`w-full overflow-hidden transition-all duration-300 ${
-            open ? 'h-auto pt-4 pb-4' : 'h-0'
-          }`}
-        >
-          <p className="text-center">{content} </p>
-        </details>
-      </div>
-      <button
-        type="button"
-        onClick={() => setOpen(!open)}
-        className="font-bold py-2 px-4 self-center"
-      >
-        {open ? <HiOutlineChevronUp /> : <HiOutlineChevronDown />}
-      </button>
+        {content}
+      </details>
     </div>
   )
 }
